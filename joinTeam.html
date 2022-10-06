@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: wheat;
+        }
+
+        .main {
+            width: 771px;
+            height: 468px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+
+        }
+
+        .main__head {
+            width: 548px;
+            height: 52px;
+            text-align: center;
+        }
+
+        .main__head>span:nth-child(1) {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            color: #333;
+        }
+
+        .main__head>span:nth-child(2) {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #333;
+
+        }
+
+        .main_btn {
+            background: #4A3AFF;
+            border: 1px solid #4A3AFF;
+            cursor: pointer;
+            border-radius: 3px;
+            width: 196px;
+            height: 40px;
+            margin-top: 40px;
+          
+        }
+        .main_btn a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 34px;
+            text-decoration: none;
+        }
+
+        .main_btn:hover {
+            background: #5a4cf9;
+            border: 1px solid #5a4cf9;
+        }
+
+        .main__target {
+            width: 548px;
+            height: 60px;
+            margin-top: 44px;
+        }
+
+        .main__target>span:nth-child(1) {
+            font-weight: 400;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .main__target>a {
+            width: 548px !important;
+            word-wrap: break-word;
+            color: #0672FF;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+        }
+
+        .main__target {
+            padding-bottom: 48px;
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+        .main__foot {
+            width: 541px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .main__foot>span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .main__foot>a {
+            color: #0672FF;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__head">
+            <span class="team__name"></span>
+            <span>邀请你成为团队的管理员，如同意加入该团队请点击下方按钮，并且用当前邮箱登录平台即确认加入，如果不同意请忽略</span>
+        </div>
+        <button class="main_btn">
+            <a href="" target="_blank">
+                加入团队
+            </a>
+        </button>
+        <div class="main__target">
+            <span>如按钮无法点击可直接访问此链接：</span>
+            <a
+                href="https://developers.google.com/identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2">https://developers.google.com/identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2identity/protocols/oauth2</a>
+        </div>
+        <div class="main__foot">
+            <span>UPMee创作者服务平台——帮助每一位创作者提升自己的影响力</span>
+            <a href="https://www.upmee.cn">https://www.upmee.cn</a>
+
+        </div>
+    </div>
+
+
+    <script>
+        let teamName = '肯德基团队'; // 团队名
+        let teamLocation = 'https://www.baidu.com' // 团队链接
+
+        document.querySelector('.main__head>span:nth-child(1)').innerHTML = teamName;;
+        document.querySelector('.main_btn>a').setAttribute('href',teamLocation);;
+        
+    </script>
+</body>
+
+</html>

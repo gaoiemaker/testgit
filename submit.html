@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: wheat;
+        }
+
+        .main {
+            width: 771px;
+            height: 468px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .main__head {
+            width: 548px;
+            height: 52px;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .main__head>span:nth-child(1) {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 26px;
+            color: #333;
+        }
+
+        .main__head__tip {
+            font-weight: 400;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 26px;
+            color: #333;
+            margin-top: 20px;
+
+        }
+
+        .submit__test {
+            width: 548px;
+            height: 28px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+            text-align: center;
+        }
+
+
+        .main__target {
+            width: 548px;
+            height: 60px;
+            margin-top: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .main__target>span {
+            font-weight: 400;
+            font-size: 16px;
+            color: #333333;
+        }
+
+
+        .main__target {
+            padding-bottom: 48px;
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+        .main__foot {
+            width: 541px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .main__foot>span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .main__foot>a {
+            color: #0672FF;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__head">
+            <span>亲爱的用户:</span>
+            <br>
+            <span class="main__head__tip">您此次操作的验证码为:</span>
+        </div>
+        <br>
+        <span class="submit__test">
+
+        </span>
+        <div class="main__target">
+            <span>请尽快进行下一步操作。 如非你本人操作，请忽略此邮件。</span>
+            <br>
+            <span>感谢您的使用！</span>
+        </div>
+        <div class="main__foot">
+            <span>UPMee创作者服务平台——帮助每一位创作者提升自己的影响力</span>
+            <a href="https://www.upmee.cn">https://www.upmee.cn</a>
+        </div>
+    </div>
+
+
+    <script>
+        let submitTest = '3CAEQT'; // 验证码
+
+        document.querySelector('.submit__test').innerHTML = submitTest;
+    </script>
+</body>
+
+</html>
