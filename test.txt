@@ -1,17 +1,1 @@
-aaaaaaa
-bbbbb
-ccc`
-dddd
-ggggg
-eeeeee
-nobel
-<<<<<<< HEAD
-main 上的修改
-:wq
-直接提交到圆盾的main分支
-在main分支上的提交 直接更新远端
-
-=======
-直接更新好了
-shidsidhishd
->>>>>>> feat/nobel
+已经全部没有了
