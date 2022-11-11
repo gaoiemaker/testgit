@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-container {
+            position: relative;
+            height: 500px;
+            width: 300px;
+            filter: blur(60px);
+
+        }
+
+        .container {
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        .realImg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./a.jpeg" class="login-container">
+
+        </img>
+        <img src="./a.jpeg" alt="" class="realImg">
+    </div>
+    <script>
+
+        function trytest() {
+            let x = 1;
+            try { 
+                x++;
+                return x
+            } catch(err) { 
+
+            }finally{
+                x++
+                return x
+            }
+            return x
+        }
+       
+        console.log( trytest())
+    </script>
+</body>
+
+</html>

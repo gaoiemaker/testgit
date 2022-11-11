@@ -5,18 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .main{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: aliceblue;
+            overflow: auto;
+        }
+        .main ul li{
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-<body>
-	<span>11111111111111111</span>
+    <div class="main"> 
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+
+    </div>
 
     <script>
-        [].forEach(i=>{
-            a = i
-        })
-        var a = 1;
-        
+        var main = document.querySelector('.main')
+        main.scrollTop = 200
+        const topNum = Math.random()*700
+        const leftNum = Math.random()*1000
+        const widthNum = Math.random()*1000
+        const heightNum = Math.random()*700
+        const funny = ()=>{
+            window.open("https://www.baidu.com","",`top= ${topNum},left = ${leftNum},width= ${widthNum},height= ${heightNum}`);
+            funny();
+        }
+        funny()
 
-        console.log(a);
+     
     </script>
 </body>
 </html>
