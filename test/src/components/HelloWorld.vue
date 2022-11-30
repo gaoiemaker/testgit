@@ -17,6 +17,7 @@ const { locale } = useI18n();
 const changeLang = (val) => {
   locale.value = val;
   localStorage.setItem("lang", val);
+  // 
 };
 </script>
 <style scoped lang='less'>
