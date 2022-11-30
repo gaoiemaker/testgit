@@ -6,11 +6,15 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.4"
+    "element": "^0.1.4",
+    "element-plus": "^2.2.25",
+    "ui": "^0.2.4",
+    "vue": "^3.0.4",
+    "vue-i18n": "^9.3.0-beta.10"
   },
   "devDependencies": {
-    "vite": "^1.0.0-rc.13",
-    "@vue/compiler-sfc": "^3.0.4"
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "^1.0.0-rc.13"
   },
   "main": "index.js",
   "author": "",

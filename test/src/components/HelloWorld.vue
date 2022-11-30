@@ -1,19 +1,23 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+  <!-- 国际化页面 -->
+  <div>
+    <span>通过切换语言按钮，来改变当前内容的语言</span>
+    <button type="primary" @click="changeLang('en')">英文</button>
+    <button type="primary" @click="changeLang('zhCN')">中文</button>
+    <div>
+      <span>{{ $t("messages.name") }}</span>
+    </div>
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
-    }
-  }
-}
+ 
+<script setup>
+import { useI18n } from "vue-i18n";
+const { locale } = useI18n();
+ 
+const changeLang = (val) => {
+  locale.value = val;
+  localStorage.setItem("lang", val);
+};
 </script>
+<style scoped lang='less'>
+</style>
