@@ -2,6 +2,17 @@ const str = "ADOBECODEBANC";
 const target = "ABC";
 
 const minStr = (str, target) => {
+  //   let res = "";
+  //   const needMap = new Map();
+
+  //   for (let i in target) {
+  //     needMap.set(i, needMap.get(i) ? needMap.get(i) + 1 : 1);
+  //   }
+
+  //   // 封装好了需求集合之后  进行双指针的遍历去再集合str 中找到需求集合中的元素就可以了
+  //   let left = 0;
+  //   let right = 0;
+  //   let needLength = needMap.size;
   // 构建map
 
   const needMap = new Map();
@@ -16,8 +27,15 @@ const minStr = (str, target) => {
   let needLength = needMap.size;
 
   let res = "";
-  // 移动右指针
   while (right < str.length) {
+    console.log(111);
+    // let ritem = str[right];
+    // if(needMap.has(ritem)){
+    //     needMap.set(ritem,needMap.get(ritem) - 1)
+    //     if(needMap.get(ritem) == 0){
+    //         needLength--;
+    //     }
+    // }
     const ritem = str[right]; // 右指针指定的字符
     if (needMap.has(ritem)) {
       // 字典中有这个字符的话
@@ -46,44 +64,27 @@ const minStr = (str, target) => {
   return res;
 };
 
-const minStr2 = (str, target) => {
-  // 双指针的思路进行内的集合遍历
+// console.log(minStr(str, target));
 
-  const needMap = new Map();
-  // 构建集合
-  for (const a of target) {
-    needMap.set(a, needMap.get(a) ? needMap.get(a) + 1 : 1);
+Array.prototype.flatCopy = function (deep) {
+  let res = []
+  arr = this;
+  while (deep>=1) {
+    res = []
+    arr.forEach((item,index)=>{
+      if(Array.isArray(item)){
+        res = res.concat(item);
+        deep--;
+      }else{
+        res.push(item)
+      }
+    })
+    arr = res
   }
-  let left = 0; // 左指针
-  let right = 0; // 右指针
-  let len = needMap.size;
-  let res = "";
-  while (right < str.length) {
-    const c = str[right];
-    if (needMap.has(c)) {
-      // 需求集合中有这个元素的话 就删除一个数量的这个元素
-      needMap.set(c, needMap.get(c) - 1);
-      if (needMap.get(c) == 0) {
-        len--;
-      }
-    }
-    while (len === 0) {
-      const d = str[left];
-      const newRes = str.slice(left, right + 1);
-      if (!res || res.length > newRes.length) {
-        res = newRes;
-      }
-      if (needMap.has(d)) {
-        needMap.set(d, needMap.get(d) + 1);
-        if (needMap.get(d) == 1) {
-          len++;
-        }
-      }
-      left++;
-    }
-    right++;
-  }
-  console.log(res);
+  
+  return res;
 };
-minStr(str, target);
-minStr2(str, target);
+
+let arr = [1,2,3,4,[[5]]]
+let newres =  arr.flatCopy(1)
+console.log(newres);

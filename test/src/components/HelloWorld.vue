@@ -5,7 +5,7 @@
     <button type="primary" @click="changeLang('en')">英文</button>
     <button type="primary" @click="changeLang('zhCN')">中文</button>
     <div>
-      <span>{{ $t("messages.name") }}</span>
+      <span>{{ $t("messages.common['过去30天数据']") }}</span>
     </div>
   </div>
 </template>
