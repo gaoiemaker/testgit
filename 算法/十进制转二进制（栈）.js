@@ -14,4 +14,14 @@ const desctodoub = (desc)=>{
     return res;
 }
 console.log(desctodoub(desc));
-console.log(4 >> 1);
+
+const numToDoub = (num)=>{
+    const strack = [];
+    while(num > 0){
+        strack.unshift(num % 2);
+        num = num >> 1
+    }
+    return strack.join('');
+}
+
+console.log(numToDoub(13274))
