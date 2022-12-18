@@ -6,15 +6,12 @@ const popSort = (arr) => {
     for (let j = i; j < arr.length; j++) {
       if (arr[i] > arr[j]) {
         // 交换位置
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        [arr[i], arr[j]] = [arr[j], arr[i]];
       }
     }
   }
   return arr;
 };
-
 // 选择排序  空间复杂度 1 时间复杂度 n^2
 
 const selectSort = (arr) => {
@@ -76,10 +73,11 @@ const mergeSort = (arr) => {
   return res;
 };
 
+
 // 快速排序
 
 const quckSort = (arr) => {
-  if (arr.length <= 1) {
+  if (arr.length == 1) {
     return arr;
   }
 
